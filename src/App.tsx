@@ -8,6 +8,8 @@ import computacao4 from "/assets/computacao-4.webp";
 import computacao5 from "/assets/computacao-5.webp";
 import { RoboticaArea } from "./components/Areas/Robótica";
 import { IntHumanArea } from "./components/Areas/IntHumanArea";
+import { CalculoArea } from "./components/Areas/CalculoArea";
+import { AlgoritimosArea } from "./components/Areas/AlgoritmosArea";
 
 export default function App() {
   const [areaActive, setAreaActive] = useState<string | null>("Robótica");
@@ -90,7 +92,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#0C001F] py-10">
+      <section className="bg-[#0C001F] py-20">
         <div className="max-w-6xl mx-auto flex flex-col gap-10">
           <h2 className="text-zinc-50 font-[Inter] text-6xl font-bold text-center">
             Escolha qual área você quer conhecer:
@@ -133,6 +135,8 @@ export default function App() {
 
           {areaActive === 'Robótica' && <RoboticaArea />}
           {areaActive === 'Interação Humano Computador' && <IntHumanArea />}
+          {areaActive === 'Calculo' && <CalculoArea />}
+          {areaActive === 'Algoritimos' && <AlgoritimosArea />}
         </div>
       </section>
 
